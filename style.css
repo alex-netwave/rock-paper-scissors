@@ -14,11 +14,9 @@ body {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
-    padding: 0px 350px;
 }
 
-.player-box,
-.score-box {
+.player-box{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -29,3 +27,6 @@ h1 {
     text-decoration: underline;
 }
 
+.score {
+    text-decoration: none;
+}
