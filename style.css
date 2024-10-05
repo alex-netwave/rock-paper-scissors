@@ -1,0 +1,16 @@
+html {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(190, 255, 180);
+}
+
+body {
+    background-color: white;
+    height: 800px;
+    width: 70%;
+    margin: 0px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    flex-direction: row;
+}
