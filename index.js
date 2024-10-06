@@ -3,6 +3,8 @@ const score = document.querySelector(".score");
 const opponentStatus = document.querySelector(".opponent-status");
 const userMove = document.querySelector(".user-move");
 const opponentMove = document.querySelector(".opponent-move");
+const announcement = document.querySelector(".announcement");
+const resetBttn = document.querySelector("button");
 
 let userScore = 0;
 let opponentScore = 0;
@@ -37,13 +39,19 @@ select.addEventListener('change', ()=>
     playRound(userChoice, opponentChoice);
     resetUserChoice();
     if(roundNum === 3){
-        if(userScore > opponentScore)
-            alert("User wins the game!");
-        else  if(userScore < opponentScore)
-            alert("Opponent wins the game!");
-        else
-            alert("This game is a DRAW!!")
-        resetGame();
+        if(userScore > opponentScore){
+            announcement.style.color="white";           
+            announcement.textContent = "USER WINS THE GAME!";
+        }
+        else  if(userScore < opponentScore){
+            announcement.style.color="red";           
+            announcement.textContent = "Opponent wins the game!";
+        }
+        else {
+            announcement.style.color="white";               
+            announcement.textContent = "This game is a DRAW!!";
+        }
+        select.disabled=true;
     }
 });
 
@@ -73,16 +81,25 @@ function updateScore(winner) {
             alert("User, make a move");
             break;
         case "draw":
-            alert("DRAW");
+        {
+            announcement.style.color="white";  
+            announcement.textContent = "DRAW!!";
             break;
+        }
         case "user":
-            alert("User wins round.");
+        {
+            announcement.textContent = "User wins round!";
+            announcement.style.color="white";  
             userScore+=1;
             break;
+        }
         case "opponent":
-            alert("Opponent wins round.");
+        {
+            announcement.textContent = "Opponent wins round!";
+            announcement.style.color="red";           
             opponentScore+=1;
             break;
+        }
     }
     updateScoreDisplayed(winner);
 }
@@ -107,5 +124,9 @@ function resetGame() {
     userScore = 0;
     opponentScore = 0;
     roundNum = 0;
+    announcement.textContent = "";
+    select.disabled=false;
     updateScoreDisplayed();
 }
+
+resetBttn.addEventListener('click', resetGame);

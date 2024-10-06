@@ -6,13 +6,13 @@ html {
 
 body {
     background-color: white;
-    height: 400px;
+    height: 600px;
     width: 50%;
     margin: 0px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-sizing: border-box;
 }
 
@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 70%;
+    height: 80%;
 }
 
 h1 {
@@ -35,7 +35,7 @@ h1 {
     border-bottom-right-radius: 40px;
     box-sizing: border-box;
     padding: 0px 50px;
-    height: 35%;
+    height: 130px;
 }
 
 .score {
@@ -50,4 +50,42 @@ h1 {
     border: black double;
     border-radius: 10px;
     padding: 10px 20px;
+}
+
+.top-row,
+.middle-row,
+.bottom-row {
+    display: flex;
+    flex-direction: row;
+
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.top-row {
+    height: 50%;
+}
+
+.middle-row {
+    height: 10%;
+    justify-content: center;
+}
+
+.bottom-row {
+    height: 40%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.announcement {
+    color: white;
+    font-size: 52px;
+    -webkit-text-stroke: 1px gold;
+    text-decoration: none;
+}
+
+button {
+    height: 25px;
 }
