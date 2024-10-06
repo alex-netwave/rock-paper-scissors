@@ -38,10 +38,12 @@ select.addEventListener('change', ()=>
     if(roundNum === 3){
         if(userScore > opponentScore)
             alert("User wins the game!");
-        else 
+        else  if(userScore < opponentScore)
             alert("Opponent wins the game!");
+        else
+            alert("This game is a DRAW!!")
+        resetGame();
     }
-    resetGame();
 });
 
 function checkRoundWinner(userChoice, opponentChoice) {
@@ -85,8 +87,7 @@ function updateScore(winner) {
 }
 
 function updateScoreDisplayed(winner){
-    if(winner === "user" || winner === "opponent")
-        score.textContent = `Score: ${userScore} | ${opponentScore}`;
+    score.textContent = `Score: ${userScore} | ${opponentScore}`;
 }
 
 function updateChoiceDisplayed(userChoice, opponentChoice){
@@ -105,4 +106,5 @@ function resetGame() {
     userScore = 0;
     opponentScore = 0;
     roundNum = 0;
+    updateScoreDisplayed();
 }
