@@ -88,7 +88,7 @@ function updateScore(winner) {
 }
 
 function updateScoreDisplayed(winner){
-    score.textContent = `Score: ${userScore} | ${opponentScore}`;
+    score.textContent = `${userScore} | ${opponentScore}`;
 }
 
 function updateChoiceDisplayed(userChoice, opponentChoice){
