@@ -124,6 +124,10 @@ function resetGame() {
     userScore = 0;
     opponentScore = 0;
     roundNum = 0;
+    
+    // resetting displayed choice
+    userMove.textContent = "";
+    opponentMove.textContent = "";
     announcement.textContent = "";
     select.disabled=false;
     updateScoreDisplayed();

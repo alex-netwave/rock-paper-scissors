@@ -22,11 +22,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 80%;
+    height: 100%;
 }
 
 h1 {
     text-decoration: underline;
+    font-size: 52px;
 }
 
 .score-box {
@@ -34,13 +35,17 @@ h1 {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     box-sizing: border-box;
-    padding: 0px 50px;
-    height: 130px;
+    width: 250px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .score {
     text-decoration: none;
     text-align: center;
+    margin: -15px;
     
 }
 
@@ -57,31 +62,33 @@ h1 {
 .bottom-row {
     display: flex;
     flex-direction: row;
+}
 
+.middle-row,
+.middle-row {   
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
 
-.top-row {
+.middle-row {
     height: 50%;
 }
 
-.middle-row {
+.bottom-row {
     height: 10%;
     justify-content: center;
 }
 
-.bottom-row {
+.top-row {
     height: 40%;
     background-color: black;
     justify-content: center;
     align-items: center;
 }
 
-
 .announcement {
     color: white;
-    font-size: 52px;
+    font-size: 64px;
     -webkit-text-stroke: 1px gold;
     text-decoration: none;
 }
