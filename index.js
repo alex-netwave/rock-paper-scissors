@@ -1,7 +1,8 @@
 const select = document.querySelector("select");
 const score = document.querySelector(".score");
-const userStatus = document.querySelector(".user-status");
 const opponentStatus = document.querySelector(".opponent-status");
+const userMove = document.querySelector(".user-move");
+const opponentMove = document.querySelector(".opponent-move");
 
 let userScore = 0;
 let opponentScore = 0;
@@ -91,8 +92,9 @@ function updateScoreDisplayed(winner){
 }
 
 function updateChoiceDisplayed(userChoice, opponentChoice){
-    userStatus.textContent = userChoice;
-    opponentStatus.textContent = opponentChoice;
+    userMove.textContent = userChoice;
+    opponentMove.textContent = opponentChoice;
+    opponentStatus.textContent = "";
 }
 
 function resetUserChoice() {
@@ -101,7 +103,6 @@ function resetUserChoice() {
 }
 
 function resetGame() {
-    userStatus.textContent = "";
     opponentStatus.textContent = "Waiting for user to make a move...";
     userScore = 0;
     opponentScore = 0;

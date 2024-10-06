@@ -30,3 +30,11 @@ h1 {
 .score {
     text-decoration: none;
 }
+
+.user-move,
+.opponent-move {
+    font-size: 32px;
+    border: black double;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
